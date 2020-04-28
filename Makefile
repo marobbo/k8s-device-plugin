@@ -43,7 +43,10 @@ ubuntu16.04:
 	$(DOCKER) build --pull \
 		--tag $(REGISTRY)/k8s-device-plugin:$(VERSION)-ubuntu16.04 \
 		--file docker/amd64/Dockerfile.ubuntu16.04 .
-
+ubuntu16.04.ppc64le:
+        $(DOCKER) build --pull \
+                --tag $(REGISTRY)/k8s-device-plugin:$(VERSION)-ubuntu16.04 \
+                --file docker/ppc64le/Dockerfile.ubuntu16.04 .
 ubi8:
 	$(DOCKER) build --pull \
 		--tag $(REGISTRY)/k8s-device-plugin:$(VERSION)-ubi8 \
